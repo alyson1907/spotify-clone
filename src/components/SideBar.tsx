@@ -1,4 +1,5 @@
 import React from 'react'
+import 'components/styles/SideBar.scss'
 
 type Section = {
   icon: string
@@ -17,13 +18,15 @@ interface ISideBar {
 }
 
 const SideBar: React.FC<ISideBar> = ({ sections, playlists }) => {
-  return <div className='container'>
-    <p>Side bar</p>
-    <p>Side bar</p>
-    <p>Side bar</p>
-    <p>Side bar</p>
-    <p>Side bar</p>
-  </div>
+  return (
+    <div className='container'>
+      <p>Side bar</p>
+      <p>Side bar</p>
+      <p>Side bar</p>
+      <p>Side bar</p>
+      <p>Side bar</p>
+    </div>
+  )
 }
 
 SideBar.defaultProps = {

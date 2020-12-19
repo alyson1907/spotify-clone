@@ -6,6 +6,7 @@ const Home:React.FC = () => {
   return (
     <div className='Home'>
       <SideBar />
+      <div style={{backgroundColor: '#212121', display: 'flex', flex: 4}} />
     </div>
   )
 }
