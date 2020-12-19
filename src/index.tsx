@@ -1,12 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-import App from './containers/Home'
+import Home from './containers/Home'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Route exact path='/'>
+        <Home />
+      </Route>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

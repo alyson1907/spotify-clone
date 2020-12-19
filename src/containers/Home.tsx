@@ -3,9 +3,8 @@ import './styles/Home.scss'
 
 const Home:React.FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-      </header>
+    <div className='Home'>
+      <p>Welcome to the Spotify Clone!</p>
     </div>
   )
 }
