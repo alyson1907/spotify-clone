@@ -7,6 +7,13 @@ $lightOpacity: 1;
   width: 232px;
   background-color: $backgroundDarker;
 
+  .divider {
+    border: none;
+    margin: 16px;
+    height: 1px;
+    background-color: $backgroundLighter;
+  }
+
   .spotify-logo-container {
     display: flex;
     flex: 1;
@@ -27,26 +34,20 @@ $lightOpacity: 1;
   }
 
   .playlists-container {
-    margin-top: 24px;
+    margin: 0px 16px;
+
     .playlists-title {
-      margin: 0px 24px;
       color: $fontDark;
+      margin-top: 24px;
+      margin-bottom: 16px;
     }
 
-
-    .buttons {
+    .playlists-icon-wrapper {
       display: flex;
-      flex: 1;
+      padding: 6px;
+      margin-right: 16px;
       align-items: center;
-      margin: 0px 8px;
-      padding: 8px 0px;
-      border-radius: 4px;
-      transition: 0.5s;
-      opacity: $darkOpacity;
-      &:hover {
-        cursor: pointer;
-        opacity: $lightOpacity;
-      }
+      justify-content: center;
     }
   }
 }

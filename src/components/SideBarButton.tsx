@@ -5,7 +5,7 @@ type Props = {
   /** Button text to be rendered after children (right most element) */
   text: string
   onClick?: () => void
-  isSelected: boolean
+  isSelected?: boolean
 }
 
 const SideBarButton: React.FC<Props> = ({ children, text, onClick, isSelected }) => {

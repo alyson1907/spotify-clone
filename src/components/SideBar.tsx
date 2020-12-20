@@ -12,8 +12,9 @@ type Section = {
 }
 
 type Playlist = {
-  img: String
-  name: String
+  icon: keyof typeof VscIcons
+  iconBackground: string
+  text: string
 }
 
 interface ISideBar {
@@ -46,10 +47,22 @@ const renderSections = (sections?: Array<Section>, selectedSection = 0) => {
   )
 }
 
-const renderPlaylists = (playlists?: Array<Playlist>) => {
+const renderPlaylists = (playlists: Array<Playlist>) => {
+  const toRender: Array<Playlist> = [{ icon: 'VscAdd', iconBackground: 'white', text: 'Create Playlist' }, ...playlists]
+
   return (
     <div className='playlists-container'>
       <p className='playlists-title'>PLAYLISTS</p>
+      {toRender!.map(({ iconBackground, text, icon }) => {
+        const Icon = VscIcons[icon]
+        return (
+          <SideBarButton text={text}>
+            <div className='playlists-icon-wrapper' style={{ background: iconBackground }}>
+              <Icon size={16} strokeWidth={0.5} />
+            </div>
+          </SideBarButton>
+        )
+      })}
     </div>
   )
 }
@@ -59,7 +72,8 @@ const SideBar: React.FC<ISideBar> = ({ sections, playlists, selectedSection }) =
     <div className='container'>
       {renderSpotifyLogo()}
       {renderSections(sections, selectedSection)}
-      {renderPlaylists(playlists)}
+      {renderPlaylists(playlists || [])}
+      <hr className='divider' />
     </div>
   )
 }
