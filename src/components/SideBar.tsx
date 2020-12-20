@@ -1,4 +1,5 @@
 import React from 'react'
+import SideBarButton from 'components/SideBarButton'
 import 'components/styles/SideBar.scss'
 import * as VscIcons from 'react-icons/vsc'
 import { ReactComponent as SpotifyLogo } from 'assets/spotifyIcon.svg'
@@ -31,15 +32,18 @@ const renderSpotifyLogo = () => {
 }
 
 const renderSections = (sections?: Array<Section>, selectedSection = 0) => {
-  return sections!.map(({ icon, name, onClick }, idx) => {
-    const Icon = VscIcons[icon]
-    return (
-      <div key={name} className={`sections-container ${selectedSection === idx && 'selected'}`} onClick={onClick}>
-        <Icon className='section-icon' color={theme.fontLight} size={24} />
-        <p className='section-name'>{name}</p>
-      </div>
-    )
-  })
+  return (
+    <div className='sections-container'>
+      {sections!.map(({ icon, name, onClick }, idx) => {
+        const Icon = VscIcons[icon]
+        return (
+          <SideBarButton key={name} text={name} isSelected={selectedSection === idx} onClick={onClick}>
+            <Icon className='section-icon' color={theme.fontLight} size={24} />
+          </SideBarButton>
+        )
+      })}
+    </div>
+  )
 }
 
 const renderPlaylists = (playlists?: Array<Playlist>) => {

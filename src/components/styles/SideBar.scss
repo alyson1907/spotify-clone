@@ -21,35 +21,18 @@ $lightOpacity: 1;
   }
 
   .sections-container {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    margin: 0px 8px;
-    padding: 8px 0px;
-    border-radius: 4px;
-    transition: 0.5s;
-    opacity: $darkOpacity;
-    &.selected {
-      opacity: $lightOpacity;
-      background-color: $backgroundLighter;
-    }
-    &:hover {
-      cursor: pointer;
-      opacity: $lightOpacity;
-    }
-
     .section-icon {
       margin: 0px 16px;
     }
   }
 
   .playlists-container {
+    margin-top: 24px;
     .playlists-title {
       margin: 0px 24px;
       color: $fontDark;
     }
 
-    margin: 16px 0px;
 
     .buttons {
       display: flex;
