@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
 import Home from './containers/Home'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import reportWebVitals from './reportWebVitals'
 

@@ -1,8 +1,9 @@
 @import '../../theme.scss';
+$darkOpacity: 0.7;
+$lightOpacity: 1;
 
 .container {
   display: block;
-  text-align: center;
   width: 232px;
   background-color: $backgroundDarker;
 
@@ -11,7 +12,7 @@
     flex: 1;
     flex-direction: row;
     align-items: center;
-    padding: 16px;
+    margin: 16px;
 
     .logo {
       width: 44px;
@@ -19,7 +20,7 @@
     }
   }
 
-  .section {
+  .sections-container {
     display: flex;
     flex: 1;
     align-items: center;
@@ -27,18 +28,42 @@
     padding: 8px 0px;
     border-radius: 4px;
     transition: 0.5s;
-    opacity: 0.7;
+    opacity: $darkOpacity;
     &.selected {
-      opacity: 1;
+      opacity: $lightOpacity;
       background-color: $backgroundLighter;
     }
     &:hover {
       cursor: pointer;
-      opacity: 1;
+      opacity: $lightOpacity;
     }
 
     .section-icon {
       margin: 0px 16px;
+    }
+  }
+
+  .playlists-container {
+    .playlists-title {
+      margin: 0px 24px;
+      color: $fontDark;
+    }
+
+    margin: 16px 0px;
+
+    .buttons {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin: 0px 8px;
+      padding: 8px 0px;
+      border-radius: 4px;
+      transition: 0.5s;
+      opacity: $darkOpacity;
+      &:hover {
+        cursor: pointer;
+        opacity: $lightOpacity;
+      }
     }
   }
 }

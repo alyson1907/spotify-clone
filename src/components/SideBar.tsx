@@ -21,18 +21,6 @@ interface ISideBar {
   selectedSection: number
 }
 
-const renderSectionBtns = (sections?: Array<Section>, selectedSection = 0) => {
-  return sections!.map(({ icon, name, onClick }, idx) => {
-    const Icon = VscIcons[icon]
-    return (
-      <div key={name} className={`section ${selectedSection === idx && 'selected'}`} onClick={onClick}>
-        <Icon className='section-icon' color={theme.fontLight} size={24} />
-        <p className='section-name'>{name}</p>
-      </div>
-    )
-  })
-}
-
 const renderSpotifyLogo = () => {
   return (
     <div className='spotify-logo-container'>
@@ -42,11 +30,32 @@ const renderSpotifyLogo = () => {
   )
 }
 
+const renderSections = (sections?: Array<Section>, selectedSection = 0) => {
+  return sections!.map(({ icon, name, onClick }, idx) => {
+    const Icon = VscIcons[icon]
+    return (
+      <div key={name} className={`sections-container ${selectedSection === idx && 'selected'}`} onClick={onClick}>
+        <Icon className='section-icon' color={theme.fontLight} size={24} />
+        <p className='section-name'>{name}</p>
+      </div>
+    )
+  })
+}
+
+const renderPlaylists = (playlists?: Array<Playlist>) => {
+  return (
+    <div className='playlists-container'>
+      <p className='playlists-title'>PLAYLISTS</p>
+    </div>
+  )
+}
+
 const SideBar: React.FC<ISideBar> = ({ sections, playlists, selectedSection }) => {
   return (
     <div className='container'>
       {renderSpotifyLogo()}
-      {renderSectionBtns(sections, selectedSection)}
+      {renderSections(sections, selectedSection)}
+      {renderPlaylists(playlists)}
     </div>
   )
 }
