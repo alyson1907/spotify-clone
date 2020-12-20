@@ -36,7 +36,7 @@ const renderSectionBtns = (sections?: Array<Section>, selectedSection = 0) => {
 const renderSpotifyLogo = () => {
   return (
     <div className='spotify-logo-container'>
-      <SpotifyLogo className='logo' fill='currentColor' />
+      <SpotifyLogo className='logo' fill={theme.fontLight} />
       <h2>Spotify</h2>
     </div>
   )
