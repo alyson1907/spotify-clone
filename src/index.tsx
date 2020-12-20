@@ -9,9 +9,7 @@ import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Route exact path='/'>
-        <Home />
-      </Route>
+      <Route exact path='/' component={Home} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

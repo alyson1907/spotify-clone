@@ -1,8 +1,11 @@
 import React from 'react'
 import 'components/styles/SideBar.scss'
+import * as VscIcons from 'react-icons/vsc'
+import { IconType } from 'react-icons/lib'
+import theme from 'theme'
 
 type Section = {
-  icon: string
+  icon: keyof typeof VscIcons
   name: string
   onClick?: () => void
 }
@@ -20,17 +23,21 @@ interface ISideBar {
 const SideBar: React.FC<ISideBar> = ({ sections, playlists }) => {
   return (
     <div className='container'>
-      <p>Side bar</p>
-      <p>Side bar</p>
-      <p>Side bar</p>
-      <p>Side bar</p>
-      <p>Side bar</p>
+      {sections!.map(({ icon, name }) => {
+        const Icon = VscIcons[icon]
+        return (
+          <div className='section'>
+            <Icon className='section-icon' color={theme.fontLight} size={24} />
+            <p className='section-name'>{name}</p>
+          </div>
+        )
+      })}
     </div>
   )
 }
 
 SideBar.defaultProps = {
-  sections: [],
+  sections: [{ icon: 'VscTriangleRight', name: '', onClick: () => {} }],
   playlists: [],
 }
 
