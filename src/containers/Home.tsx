@@ -6,14 +6,17 @@ const sideBarSections: Array<any> = [
   {
     icon: 'VscHome',
     name: 'Home',
+    onClick: () => {console.log('Home clicked')}
   },
   {
     icon: 'VscSearch',
     name: 'Search',
+    onClick: () => {console.log('Search clicked')}
   },
   {
     icon: 'VscLibrary',
     name: 'Your Library',
+    onClick: () => {console.log('Your Library clicked')}
   },
 ]
 

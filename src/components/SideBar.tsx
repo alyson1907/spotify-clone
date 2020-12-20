@@ -23,10 +23,10 @@ interface ISideBar {
 const SideBar: React.FC<ISideBar> = ({ sections, playlists }) => {
   return (
     <div className='container'>
-      {sections!.map(({ icon, name }) => {
+      {sections!.map(({ icon, name, onClick }) => {
         const Icon = VscIcons[icon]
         return (
-          <div className='section'>
+          <div key={name} className='section' onClick={onClick}>
             <Icon className='section-icon' color={theme.fontLight} size={24} />
             <p className='section-name'>{name}</p>
           </div>
