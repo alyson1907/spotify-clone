@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
+import Header from 'components/Header'
 import './styles/Home.scss'
 
 const Home: React.FC = () => {
@@ -39,8 +40,11 @@ const Home: React.FC = () => {
 
   return (
     <div className='Home'>
-      <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
-      <div style={{ backgroundColor: '#212121', display: 'flex', flex: 4 }} />
+      <div className='home-wrapper'>
+        <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
+        <div style={{ backgroundColor: '#212121', display: 'flex', flex: 4 }}></div>
+        <Header />
+      </div>
     </div>
   )
 }

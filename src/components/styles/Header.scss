@@ -1,0 +1,13 @@
+@import '../../theme.scss';
+
+.header-container {
+  width: 100%;
+  top: 0;
+  padding: 16px;
+  // background-color: $backgroundDark;
+  background-color: violet;
+
+  .forward-icon {
+    margin-left: 16px;
+  }
+}

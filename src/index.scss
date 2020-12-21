@@ -1,7 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/1bc2daddba36ba331fc4fa67828eabdc?family=Circular+Spotify+Tx+T+Med);
 @import './theme.scss';
 
-
 body, * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,11 @@ body, * {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
+
+html, body, #root {
+  height: 100%;
+}
+
 
 p {
   font-size: 14px;

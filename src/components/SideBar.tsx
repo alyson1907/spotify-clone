@@ -38,7 +38,7 @@ const renderSections = (sections?: Array<Section>, selectedSection = 0) => {
       {sections!.map(({ icon, name, onClick }, idx) => {
         const Icon = VscIcons[icon]
         return (
-          <SideBarButton key={name} text={name} isSelected={selectedSection === idx} onClick={onClick}>
+          <SideBarButton key={idx} text={name} isSelected={selectedSection === idx} onClick={onClick}>
             <Icon className='section-icon' color={theme.fontLight} size={24} />
           </SideBarButton>
         )
@@ -53,10 +53,10 @@ const renderPlaylists = (playlists: Array<Playlist>) => {
   return (
     <div className='playlists-container'>
       <p className='playlists-title'>PLAYLISTS</p>
-      {toRender!.map(({ iconBackground, text, icon }) => {
+      {toRender!.map(({ iconBackground, text, icon }, idx) => {
         const Icon = VscIcons[icon]
         return (
-          <SideBarButton text={text}>
+          <SideBarButton key={idx} text={text}>
             <div className='playlists-icon-wrapper' style={{ background: iconBackground }}>
               <Icon size={16} strokeWidth={0.5} />
             </div>

@@ -2,5 +2,11 @@
 
 .Home {
   display: flex;
-  min-height: 100vh;
+  height: 100%;
+
+  .home-wrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  }
 }
