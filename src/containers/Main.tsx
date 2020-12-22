@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
 import Header from 'components/Header'
-import './styles/Home.scss'
+import './styles/Main.scss'
 
-const Home: React.FC = () => {
+const Main: React.FC = () => {
   const [selectedSideBar, setSelectedSideBar] = useState(0)
 
   const sideBarSections: Array<any> = [
@@ -39,8 +39,8 @@ const Home: React.FC = () => {
   ]
 
   return (
-    <div className='Home'>
-      <div className='home-wrapper'>
+    <div className='main-container'>
+      <div className='main-wrapper'>
         <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
         <div style={{ backgroundColor: '#212121', display: 'flex', flex: 4 }}></div>
         <Header />
@@ -49,4 +49,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Main

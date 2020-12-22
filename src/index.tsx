@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-import Home from './containers/Home'
+import Main from './containers/Main'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import reportWebVitals from './reportWebVitals'
@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={Main} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
