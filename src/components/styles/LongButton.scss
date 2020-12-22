@@ -1,0 +1,25 @@
+@import '../../theme.scss';
+
+.default-long-btn {
+  background-color: $white;
+  border-radius: 500px;
+  text-align: center;
+  transition: 0.1s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.default-text {
+  color: $black;
+  font-weight: bold;
+  font-size: 12px;
+  font-stretch: 1;
+  padding: 8px 34px;
+}
