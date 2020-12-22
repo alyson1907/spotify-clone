@@ -2,10 +2,10 @@
 
 .header-container {
   width: 100%;
+  height: fit-content;
   top: 0;
   padding: 16px;
-  // background-color: $backgroundDark;
-  background-color: violet;
+  background-color: $backgroundDarker;
 
   .forward-icon {
     margin-left: 16px;
