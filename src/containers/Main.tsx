@@ -42,7 +42,6 @@ const Main: React.FC = () => {
     <div className='main-container'>
       <div className='main-wrapper'>
         <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
-        <div style={{ backgroundColor: '#212121', display: 'flex', flex: 4 }}></div>
         <Header />
       </div>
     </div>

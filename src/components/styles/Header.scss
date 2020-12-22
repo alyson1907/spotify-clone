@@ -1,11 +1,27 @@
 @import '../../theme.scss';
 
 .header-container {
-  width: 100%;
   height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
   top: 0;
   padding: 16px;
   background-color: $backgroundDarker;
+
+  .header-login {
+    display: flex;
+    align-items: center;
+
+    .signup-btn {
+      background-color: $backgroundDarker;
+      margin-right: 32px;
+    }
+
+    .signup-btn-text {
+      color: $white
+    }
+  }
 
   .forward-icon {
     margin-left: 16px;
