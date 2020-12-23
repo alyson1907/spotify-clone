@@ -1,0 +1,28 @@
+@import '../../theme.scss';
+
+.album-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 4px;
+  max-width: 240px;
+  background-color: $backgroundLight;
+
+  .album-image {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    max-width: 140px;
+    object-fit: contain;
+  }
+
+  & > h4 {
+    margin-top: 16px;
+  }
+
+  & > p {
+    margin-top: 8px;
+    color: $fontDark;
+  }
+}

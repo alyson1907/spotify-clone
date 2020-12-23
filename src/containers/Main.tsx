@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
 import Header from 'components/Header'
-import './styles/Main.scss' 
+import Album from 'components/Album'
+import './styles/Main.scss'
 
 const Main: React.FC = () => {
   const [selectedSideBar, setSelectedSideBar] = useState(0)
@@ -40,9 +41,16 @@ const Main: React.FC = () => {
 
   return (
     <div className='main-container'>
-        <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
+      <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
       <div className='main-wrapper'>
         <Header />
+        <div style={{display: 'flex'}}>
+          <Album
+            img='https://picsum.photos/320'
+            title='Lorem Picsum'
+            description='This is a fake description but you dont know it is actually fake'
+          />
+        </div>
       </div>
     </div>
   )
