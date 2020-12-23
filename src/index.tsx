@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-import Main from './containers/Main'
+import MainRouter from 'routes/MainRouter'
 import { BrowserRouter, Route } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename='/'>
-        <Route exact path='' component={Main} />
+    <BrowserRouter>
+      <Route path='/' component={MainRouter} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

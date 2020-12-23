@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
 import Header from 'components/Header'
-import './styles/Main.scss'
+import './styles/Main.scss' 
 
 const Main: React.FC = () => {
   const [selectedSideBar, setSelectedSideBar] = useState(0)
@@ -40,8 +40,8 @@ const Main: React.FC = () => {
 
   return (
     <div className='main-container'>
-      <div className='main-wrapper'>
         <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
+      <div className='main-wrapper'>
         <Header />
       </div>
     </div>
