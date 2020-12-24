@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
 import Header from 'components/Header'
-import AlbumSection from 'components/AlbumSection'
-import AlbumCard from 'components/AlbumCard'
+import MainRouter from 'routes/MainRouter'
 import './styles/Main.scss'
+import { RouteComponentProps } from 'react-router-dom'
 
-const Main: React.FC = () => {
+const Main: React.FC<RouteComponentProps> = ({ history }) => {
   const [selectedSideBar, setSelectedSideBar] = useState(0)
 
   const sideBarSections: Array<any> = [
@@ -14,6 +14,7 @@ const Main: React.FC = () => {
       name: 'Home',
       onClick: () => {
         setSelectedSideBar(0)
+        history.push('/')
       },
     },
     {
@@ -21,6 +22,7 @@ const Main: React.FC = () => {
       name: 'Search',
       onClick: () => {
         setSelectedSideBar(1)
+        history.push('/search')
       },
     },
     {
@@ -45,33 +47,7 @@ const Main: React.FC = () => {
       <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
       <div className='main-wrapper'>
         <Header />
-        <AlbumSection title='Para você e sua família'>
-          <AlbumCard
-            img='https://picsum.photos/320'
-            title='Lorem Picsum'
-            description='This is a fake description but you dont know it is actually fake'
-          />
-          <AlbumCard
-            img='https://picsum.photos/320'
-            title='Lorem Picsum'
-            description='This is a fake description but you dont know it is actually fake'
-          />
-          <AlbumCard
-            img='https://picsum.photos/320'
-            title='Lorem Picsum'
-            description='This is a fake description but you dont know it is actually fake'
-          />
-          <AlbumCard
-            img='https://picsum.photos/320'
-            title='Lorem Picsum'
-            description='This is a fake description but you dont know it is actually fake'
-          />
-          <AlbumCard
-            img='https://picsum.photos/320'
-            title='Lorem Picsum'
-            description='This is a fake description but you dont know it is actually fake'
-          />
-        </AlbumSection>
+        <MainRouter />
       </div>
     </div>
   )

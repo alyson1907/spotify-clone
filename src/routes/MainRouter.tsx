@@ -1,11 +1,13 @@
 import React from 'react'
-import Main from 'containers/Main'
+import Home from 'containers/Home'
+import Search from 'containers/Search'
 import { Route, Switch } from 'react-router-dom'
 
 const MainRouter: React.FC = () => {
   return (
     <Switch>
-      <Route path='/' component={Main} />
+      <Route path='/search' component={Search} />
+      <Route path='/' component={Home} />
     </Switch>
   )
 }
