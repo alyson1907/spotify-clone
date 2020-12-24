@@ -79,7 +79,15 @@ const SideBar: React.FC<ISideBar> = ({ sections, playlists, selectedSection }) =
 }
 
 SideBar.defaultProps = {
-  sections: [{ icon: 'VscTriangleRight', name: '', onClick: () => {} }],
+  sections: [
+    {
+      icon: 'VscTriangleRight',
+      name: '',
+      onClick: () => {
+        console.log('SideBar section clicked')
+      },
+    },
+  ],
   playlists: [],
   selectedSection: 0,
 }

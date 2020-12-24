@@ -16,7 +16,7 @@ const handleDescriptionMaxLength: descrLengthType = (description, maxLength = 50
 const AlbumCard: React.FC<Props> = ({ img, title, description, onClick }) => {
   return (
     <div className='album-container'>
-      <img className='album-image' src={img} alt={title} loading="lazy" />
+      <img className='album-image' src={img} alt={title} loading='lazy' />
       <h4>{title}</h4>
       <p>{handleDescriptionMaxLength(description)}</p>
     </div>
@@ -27,7 +27,9 @@ AlbumCard.defaultProps = {
   img: '',
   title: '',
   description: '',
-  onClick: () => {},
+  onClick: () => {
+    console.log('AlbumCard clicked')
+  },
 }
 
 export default AlbumCard

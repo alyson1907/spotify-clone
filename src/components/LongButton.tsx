@@ -20,7 +20,9 @@ LongButton.defaultProps = {
   containerClass: '',
   textClass: '',
   text: '',
-  onClick: () => {},
+  onClick: () => {
+    console.log('LongButton clicked')
+  },
 }
 
 export default LongButton

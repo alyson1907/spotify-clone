@@ -19,7 +19,9 @@ const IconButton: React.FC<Props> = ({ icon, size, fill, style, className, onCli
 IconButton.defaultProps = {
   icon: 'BiQuestionMark',
   size: 32,
-  onClick: () => {},
+  onClick: () => {
+    console.log('IconButton clicked')
+  },
 }
 
 export default IconButton

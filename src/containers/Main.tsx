@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SideBar from 'components/SideBar'
 import Header from 'components/Header'
+import AlbumSection from 'components/AlbumSection'
 import AlbumCard from 'components/AlbumCard'
 import './styles/Main.scss'
 
@@ -44,7 +45,7 @@ const Main: React.FC = () => {
       <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
       <div className='main-wrapper'>
         <Header />
-        <div style={{display: 'flex'}}>
+        <AlbumSection title='Para você e sua família'>
           <AlbumCard
             img='https://picsum.photos/320'
             title='Lorem Picsum'
@@ -70,7 +71,7 @@ const Main: React.FC = () => {
             title='Lorem Picsum'
             description='This is a fake description but you dont know it is actually fake'
           />
-        </div>
+        </AlbumSection>
       </div>
     </div>
   )
