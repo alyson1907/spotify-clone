@@ -1,6 +1,5 @@
 import React from 'react'
-import 'components/styles/Album.scss'
-import { CgMaximizeAlt } from 'react-icons/cg'
+import 'components/styles/AlbumCard.scss'
 
 type Props = {
   img: string
@@ -14,7 +13,7 @@ const handleDescriptionMaxLength: descrLengthType = (description, maxLength = 50
   return description.length > maxLength ? description.slice(0, maxLength) + '...' : description
 }
 
-const Album: React.FC<Props> = ({ img, title, description, onClick }) => {
+const AlbumCard: React.FC<Props> = ({ img, title, description, onClick }) => {
   return (
     <div className='album-container'>
       <img className='album-image' src={img} alt={title} />
@@ -24,11 +23,11 @@ const Album: React.FC<Props> = ({ img, title, description, onClick }) => {
   )
 }
 
-Album.defaultProps = {
+AlbumCard.defaultProps = {
   img: '',
   title: '',
   description: '',
   onClick: () => {},
 }
 
-export default Album
+export default AlbumCard
