@@ -50,6 +50,26 @@ const Main: React.FC = () => {
             title='Lorem Picsum'
             description='This is a fake description but you dont know it is actually fake'
           />
+          <AlbumCard
+            img='https://picsum.photos/320'
+            title='Lorem Picsum'
+            description='This is a fake description but you dont know it is actually fake'
+          />
+          <AlbumCard
+            img='https://picsum.photos/320'
+            title='Lorem Picsum'
+            description='This is a fake description but you dont know it is actually fake'
+          />
+          <AlbumCard
+            img='https://picsum.photos/320'
+            title='Lorem Picsum'
+            description='This is a fake description but you dont know it is actually fake'
+          />
+          <AlbumCard
+            img='https://picsum.photos/320'
+            title='Lorem Picsum'
+            description='This is a fake description but you dont know it is actually fake'
+          />
         </div>
       </div>
     </div>
