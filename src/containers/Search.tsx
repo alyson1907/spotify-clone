@@ -42,8 +42,10 @@ const renderSearchItems: React.FC<Array<SearchItemProps>> = (searchItems) => {
 const Search: React.FC = () => {
   return (
     <div className='search-container'>
-      <h2>Browse all</h2>
+      <h2 className='search-title-text'>Browse all</h2>
       <div className='search-items'>
+        {renderSearchItems(items)}
+        {renderSearchItems(items)}
         {renderSearchItems(items)}
         {renderSearchItems(items)}
         {renderSearchItems(items)}

@@ -1,8 +1,13 @@
 @import '../../theme.scss';
 
 .search-container {
-  padding: 32px;
+  padding: 16px;
   height: 100%;
+  
+  .search-title-text {
+    margin: 16px 0px;
+  }
+
   .search-items {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
