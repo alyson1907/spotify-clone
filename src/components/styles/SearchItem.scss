@@ -1,0 +1,24 @@
+@import '../../theme.scss';
+
+.search-item-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  border-radius: 6px;
+  padding-bottom: 80%; // Keeps the element squared (1:1 aspect ratio)
+  cursor: pointer;
+  overflow: hidden;
+
+  .search-item-image {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: -35%;
+    bottom: 0px;
+    transform: rotate(25deg);
+    object-fit: contain;
+    width: 100%;
+  }
+}

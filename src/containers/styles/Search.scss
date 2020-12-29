@@ -1,1 +1,13 @@
 @import '../../theme.scss';
+
+.search-container {
+  padding: 32px;
+  height: 100%;
+  .search-items {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+    gap: 18px;
+  }
+
+}
