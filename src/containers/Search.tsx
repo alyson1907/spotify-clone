@@ -32,8 +32,8 @@ const items = [
 const renderSearchItems: React.FC<Array<SearchItemProps>> = (searchItems) => {
   return (
     <>
-      {searchItems.map((item) => (
-        <SearchItem title={item.title} img={item.img} backgroundColor={item.backgroundColor} />
+      {searchItems.map((item, idx) => (
+        <SearchItem key={idx} title={item.title} img={item.img} backgroundColor={item.backgroundColor} />
       ))}
     </>
   )
