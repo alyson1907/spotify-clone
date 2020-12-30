@@ -5,8 +5,9 @@ import MainRouter from 'routes/MainRouter'
 import './styles/Main.scss'
 import { RouteComponentProps } from 'react-router-dom'
 
-const Main: React.FC<RouteComponentProps> = ({ history }) => {
+const Main: React.FC<RouteComponentProps> = ({ history, location }) => {
   const [selectedSideBar, setSelectedSideBar] = useState(0)
+  console.log(location)
 
   const sideBarSections: Array<any> = [
     {
@@ -46,7 +47,7 @@ const Main: React.FC<RouteComponentProps> = ({ history }) => {
     <div className='main-container'>
       <SideBar sections={sideBarSections} playlists={sideBarPlaylists} selectedSection={selectedSideBar} />
       <div className='main-wrapper'>
-        <Header />
+        <Header searchBar={location.pathname === '/search'}/>
         <MainRouter />
       </div>
     </div>
