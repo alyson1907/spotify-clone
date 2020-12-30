@@ -30,7 +30,7 @@ const SearchItem: React.FC<Props> = ({ title, img, backgroundColor, onClick }) =
       style={{ background: `linear-gradient(0deg,${backgroundColor},${backgroundColor}77)` }}
       onClick={onClick}>
       <h3>{title}</h3>
-      <img src={img} className='search-item-image' />
+      <img src={img} className='search-item-image' alt={img} />
     </div>
   )
 }

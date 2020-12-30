@@ -11,6 +11,10 @@ body, * {
   box-sizing: border-box;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 html, body, #root {
   height: 100%;
 }
