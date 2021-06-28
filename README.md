@@ -8,3 +8,14 @@ https://open.spotify.com/
 
 - React
 - Typescript
+
+# Getting Started
+## Running
+```
+npm install
+```
+
+```
+npm run start
+```
+
